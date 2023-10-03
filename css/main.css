@@ -12,6 +12,10 @@
 }
 
 /* General body styling*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -59,7 +63,7 @@ img {
   list-style: none;
 }
 
-.menu__link, .logo, .author__name {
+.section-hero__link, .menu__link, .logo, .author__name {
   text-decoration: none;
   color: currentColor;
   cursor: pointer;
@@ -660,7 +664,6 @@ img {
   border-color: var(--yellow);
   outline: none;
 }
-
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .section-hero {
     background-image: linear-gradient(var(--light-pink-hero-bg), var(--yellow-hero-bg)), url("../images/hero/hero_mobile@2x.webp");

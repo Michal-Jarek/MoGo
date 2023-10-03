@@ -12,7 +12,7 @@
     url("../images/hero/hero_mobile.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  
+
   background-position: center top;
 
   &__heading {
@@ -53,6 +53,9 @@
       border-color: var(--yellow);
       outline: none;
     }
+  }
+  &__link {
+    @extend %links;
   }
 }
 @media (min-device-pixel-ratio: 2),

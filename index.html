@@ -26,13 +26,13 @@
         <nav class="navigation">
           <ul class="menu">
             <li class="menu__item menu__item--active">
-              <a class="menu__link" href="./">About</a>
+              <a class="menu__link" href="#hero">About</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="./">Service</a>
+              <a class="menu__link" href="#description">Service</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="./">Work</a>
+              <a class="menu__link" href="#team">Work</a>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="./">Blog</a>
@@ -73,20 +73,22 @@
       </div>
     </header>
     <main>
-      <section class="section-hero">
+      <section class="section-hero" id="hero">
         <div class="container section-hero__container">
           <h2 class="section-hero__second-heading">Creative Template</h2>
           <h1 class="section-hero__heading">Welcome to MoGo</h1>
-          <button
-            class="section-hero__button"
-            type="button"
-            aria-label="Learn more about us"
+          <a class="section-hero__link" href="#description"
+            ><button
+              class="section-hero__button"
+              type="button"
+              aria-label="Learn more about us"
+            >
+              Learn More
+            </button></a
           >
-            Learn More
-          </button>
         </div>
       </section>
-      <section class="section-description">
+      <section class="section-description" id="description">
         <div class="container section-description__container">
           <h4 class="section-lower-heading">We work with</h4>
           <h3 class="section-heading">Amazing services</h3>
@@ -203,7 +205,7 @@
         </div>
       </section>
 
-      <section class="section-team">
+      <section class="section-team" id="team">
         <div class="container section-team__container">
           <h4 class="section-lower-heading">Who we are</h4>
           <h3 class="section-heading">Meet our team</h3>
