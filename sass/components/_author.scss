@@ -1,0 +1,18 @@
+.author {
+  &__txt {
+    font-size: 14px;
+    color: var(--heading-txt-color);
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+  }
+  &__name {
+    @extend %links;
+    color: var(--light-pink);
+    &:hover,
+    &:focus {
+      color: var(--light-blue);
+      outline: none;
+    }
+  }
+}

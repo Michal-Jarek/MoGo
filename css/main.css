@@ -1,0 +1,708 @@
+/* Variables CSS*/
+:root {
+  --light-pink: #f38181;
+  --light-pink-hero-bg: #f38181c0;
+  --yellow: #fce38a;
+  --yellow-hero-bg: #fce38ac0;
+  --light-green: #eaffd0;
+  --light-blue: #95e1d3;
+  --main-txt-color: #999999;
+  --heading-txt-color: #333333;
+  --nav-txt-color: #ffffff;
+}
+
+/* General body styling*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(--main-txt-color);
+  background-color: rgb(255, 255, 255);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section-team__list, .list-description__second-list, .list-description, .menu {
+  list-style: none;
+}
+
+.menu__link, .logo, .author__name {
+  text-decoration: none;
+  color: currentColor;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.section-hero, .section-team, .section-description {
+  padding: 50px 0;
+}
+
+.section-team__header {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: var(--line-height-small);
+}
+
+/* ====================== Containers ===================== */
+.container {
+  width: 100%;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+}
+/* ============= END MContainers ============ */
+.author__txt {
+  font-size: 14px;
+  color: var(--heading-txt-color);
+  font-weight: 400;
+  font-family: "Montserrat";
+  text-align: center;
+}
+.author__name {
+  color: var(--light-pink);
+}
+.author__name:hover, .author__name:focus {
+  color: var(--light-blue);
+  outline: none;
+}
+
+/* ---------- Heading section --------- */
+.section-heading {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: var(--heading-txt-color);
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 22px;
+}
+.section-heading::after {
+  content: "";
+  height: 3px;
+  width: 60px;
+  background-color: var(--light-pink);
+  display: block;
+  margin: 24px auto 0 auto;
+}
+
+.section-lower-heading {
+  font-size: 20px;
+  color: var(--heading-txt-color);
+  font-weight: 400;
+  font-family: "Kaushan Script";
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .section-heading {
+    font-size: 26px;
+  }
+  .section-heading::after {
+    margin: 28px auto 0 auto;
+  }
+}
+.section-lower-heading {
+  font-size: 22px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-heading {
+    font-size: 30px;
+  }
+  .section-heading::after {
+    margin: 41px auto 0 auto;
+  }
+  .section-lower-heading {
+    font-size: 24px;
+  }
+}
+/* ---------- Heading section  end--------- */
+/* ========================== Social Links ================== */
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--yellow);
+}
+.social-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-list__item:not(:first-of-type) {
+  border-left: 1px solid rgba(243, 129, 129, 0.4941176471);
+}
+.social-list__link {
+  display: flex;
+  width: 57px;
+  height: 57px;
+  align-items: center;
+  justify-content: center;
+  fill: var(--light-pink);
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.social-list__link:hover, .social-list__link:focus {
+  background-color: var(--light-pink);
+  fill: rgb(255, 255, 255);
+}
+.social-list__icon {
+  max-width: 26px;
+  max-height: 26px;
+}
+
+/* ==================== END SOCIAL Links ======== */
+/* ============================= LOGO ===========================*/
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--nav-txt-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.logo:hover, .logo:focus {
+  outline: none;
+  color: var(--yellow);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 30px;
+  }
+}
+/* ======================= END LOGO ======================*/
+/* ---------- Navigation section --------- */
+.navigation {
+  flex-grow: 1;
+}
+
+.menu {
+  display: none;
+  color: var(--nav-txt-color);
+  font-weight: 400;
+  font-family: "Montserrat";
+  text-align: center;
+  text-transform: uppercase;
+}
+.menu__item:not(:last-of-type) {
+  margin-right: 30px;
+}
+.menu__item--active {
+  color: var(--yellow);
+  position: relative;
+}
+.menu__item--active::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: var(--yellow);
+  display: block;
+  position: absolute;
+  bottom: -11px;
+}
+.menu__link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  outline: none;
+}
+.menu__link:hover, .menu__link:focus {
+  color: var(--yellow);
+}
+.menu__link:hover .menu__icon, .menu__link:focus .menu__icon {
+  fill: var(--yellow);
+}
+.menu__icon {
+  width: 18px;
+  fill: var(--nav-txt-color);
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu__item:not(:last-of-type) {
+    margin-right: 55px;
+  }
+}
+/* ---------- Navigation section end------ */
+/*====================== NEWSLETTER ==============*/
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.newsletter__label {
+  width: 230px;
+}
+.newsletter__header {
+  color: var(--logo-white-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-align: left;
+  text-transform: uppercase;
+}
+.newsletter__email-input {
+  width: 100%;
+  padding: 15px 16px;
+  margin-bottom: 15px;
+  border: 1px solid #e7e7e7;
+  background-color: transparent;
+  height: 40px;
+  color: var(--main-txt-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.newsletter__email-input:hover, .newsletter__email-input:focus {
+  outline: none;
+  border: 1px solid var(--light-blue);
+}
+.newsletter__button {
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: var(--light-blue);
+  border: none;
+  outline: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-colo 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.newsletter__button:hover, .newsletter__button:focus {
+  background-color: var(--yellow);
+  color: var(--light-blue);
+  outline: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .newsletter {
+    justify-content: flex-end;
+  }
+  .newsletter__button {
+    top: 8px;
+  }
+  .newsletter__label {
+    align-items: flex-start;
+  }
+}
+/*====================== END NEWSLETTER ==============*/
+/* ===================== Header layout ============ */
+.page-header {
+  margin: 24px 0;
+}
+.page-header__container {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0px;
+  padding-bottom: 3px;
+  fill: var(--nav-txt-color);
+  justify-content: center;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.menu-toggle:hover, .menu-toggle:focus {
+  fill: var(--yellow);
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+/* ======= End Header layout ======== */
+/* ========================= Section Description ====================== */
+.section-description__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-description {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin-top: 70px;
+}
+.list-description__second-list {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 5fr;
+}
+.list-description__element:first-of-type {
+  background-color: var(--team-bg-color);
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin: 0 auto;
+}
+.list-description__element:last-of-type {
+  margin-top: 20px;
+}
+.list-description__icon {
+  text-align: center;
+  width: 33px;
+  max-height: 33px;
+  margin-top: 4px;
+  fill: var(--light-blue);
+}
+.list-description__header {
+  font-weight: 400;
+  color: var(--heading-txt-color);
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.list-description__paragraph {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .list-description {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 75px;
+  }
+  .list-description__element:first-of-type {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list-description {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px 100px;
+  }
+}
+/* ========================= END Section Description ====================== */
+/* =========================  SECTION TEAM ========================== */
+.section-team {
+  margin-bottom: 80px;
+  background-color: var(--team-bg-color);
+}
+.section-team__container {
+  flex-direction: column;
+}
+.section-team__paragraph {
+  max-width: 960px;
+  margin-top: 45px;
+  margin-bottom: 90px;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+}
+.section-team__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 110px 0;
+}
+.section-team__element {
+  position: relative;
+  background-color: var(--light-blue);
+  max-width: 381px;
+  height: 471px;
+}
+.section-team__element:hover .section-team__figure {
+  transform: translate(-15px, -15px);
+}
+.section-team__element:hover .section-team__figure::before {
+  opacity: 1;
+}
+.section-team__element:hover .section-team__figcaption {
+  transform: translate(15px, 15px);
+}
+.section-team__element:hover .section-team__social-list {
+  opacity: 1;
+  transform: translate(calc(-50% - 15px), calc(-50% - 15px));
+}
+.section-team__figure {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-team__figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  background-image: linear-gradient(var(--light-pink-hero-bg), var(--yellow-hero-bg));
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-team__header {
+  margin-bottom: 30px;
+}
+.section-team__img {
+  object-fit: none;
+  max-width: 100%;
+  height: 100%;
+}
+.section-team__figcaption {
+  position: absolute;
+  width: 100%;
+  padding-top: 30px;
+  height: auto;
+  z-index: 1;
+  line-height: 1.6;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  color: var(--main-txt-color);
+  background-color: #fff;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-team__name {
+  display: block;
+  font-weight: 400;
+  padding-bottom: 15px;
+  font-size: 14px;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--heading-txt-color);
+}
+.section-team__social-list {
+  position: absolute;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .section-team__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 110px 30px;
+    justify-items: center;
+  }
+  .section-team__element:last-of-type {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-team__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .section-team__element:last-of-type {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+}
+/* ================ END SECTION TEAM ============== */
+/* ==================== FOoter =============== */
+.page-footer__container {
+  display: flex;
+  position: relative;
+  flex-direction: column-reverse;
+  align-content: center;
+  padding-top: 15px;
+}
+.page-footer__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #e5e5e5;
+  display: block;
+  margin-bottom: 24px;
+}
+.page-footer__newsletter {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__newsletter {
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .page-footer__container::after {
+    display: none;
+  }
+  .page-footer__newsletter {
+    max-width: 570px;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+/* ============== END FOoter ============ */
+/* ========================= Section Hero ====================== */
+.section-hero {
+  margin-top: -90px;
+  padding: 170px 0 160px 0;
+  color: var(--nav-txt-color);
+  background-color: var(--dark-motive);
+  background-image: linear-gradient(var(--light-pink-hero-bg), var(--yellow-hero-bg)), url("../images/hero/hero_mobile.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.section-hero__heading {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Montserrat";
+}
+.section-hero__second-heading {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Kaushan Script";
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-hero__container {
+  flex-direction: column;
+}
+.section-hero__button {
+  margin-top: 140px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--nav-txt-color);
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  padding: 10px 25px;
+  width: 160px;
+  height: 44px;
+  background-color: transparent;
+  border: 3px solid var(--nav-txt-color);
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-hero__button:hover, .section-hero__button:focus {
+  color: var(--yellow);
+  border-color: var(--yellow);
+  outline: none;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(var(--light-pink-hero-bg), var(--yellow-hero-bg)), url("../images/hero/hero_mobile@2x.webp");
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-hero {
+    padding: 229px 0 364px 0;
+    background-image: linear-gradient(var(--light-pink-hero-bg), var(--yellow-hero-bg)), url("../images/hero/hero_tablet.webp");
+  }
+  .section-hero__heading {
+    font-size: 75px;
+    line-height: 70px;
+    max-width: 400px;
+  }
+  .section-hero__second-heading {
+    font-size: 40px;
+    margin-bottom: 42px;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(var(--light-pink-hero-bg), var(--yellow-hero-bg)), url("../images/hero/hero_tablet@2x.webp");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-hero {
+    background-image: linear-gradient(var(--light-pink-hero-bg), var(--yellow-hero-bg)), url("../images/hero/hero_full.webp");
+  }
+  .section-hero__heading {
+    font-size: 150px;
+    line-height: 140px;
+    max-width: 802px;
+  }
+  .section-hero__second-heading {
+    font-size: 72px;
+    margin-bottom: 42px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(var(--light-pink-hero-bg), var(--yellow-hero-bg)), url("../images/hero/hero_full@2x.webp");
+  }
+}
+/* ========= END Section Hero ========= *//*# sourceMappingURL=main.css.map */

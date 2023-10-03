@@ -1,0 +1,38 @@
+/* ========================== Social Links ================== */
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--yellow);
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:first-of-type) {
+      border-left: 1px solid #f381817e;
+    }
+  }
+  &__link {
+    display: flex;
+    width: 57px;
+    height: 57px;
+    align-items: center;
+    justify-content: center;
+    fill: var(--light-pink);
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--light-pink);
+      fill: rgba(255, 255, 255);
+    }
+  }
+  &__icon {
+    max-width: 26px;
+    max-height: 26px;
+  }
+}
+/* ==================== END SOCIAL Links ======== */

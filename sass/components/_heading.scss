@@ -1,0 +1,51 @@
+/* ---------- Heading section --------- */
+.section-heading {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: var(--heading-txt-color);
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 22px;
+
+  &::after {
+    content: "";
+    height: 3px;
+    width: 60px;
+    background-color: var(--light-pink);
+    display: block;
+    margin: 24px auto 0 auto;
+  }
+}
+.section-lower-heading {
+  font-size: 20px;
+  color: var(--heading-txt-color);
+  font-weight: 400;
+  font-family: "Kaushan Script";
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .section-heading {
+    font-size: 26px;
+    &::after {
+      margin: 28px auto 0 auto;
+    }
+  }
+}
+.section-lower-heading {
+  font-size: 22px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-heading {
+    font-size: 30px;
+    &::after {
+      margin: 41px auto 0 auto;
+    }
+  }
+  .section-lower-heading {
+    font-size: 24px;
+  }
+}
+/* ---------- Heading section  end--------- */

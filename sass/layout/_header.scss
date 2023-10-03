@@ -1,0 +1,36 @@
+/* ===================== Header layout ============ */
+.page-header {
+  margin: 24px 0;
+  &__container {
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0px;
+  padding-bottom: 3px;
+  fill: var(--nav-txt-color);
+  justify-content: center;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    fill: var(--yellow);
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* ======= End Header layout ======== */
